@@ -145,14 +145,10 @@ Key features:
 
 ---
 
-## Running Training
+## Citation
+If you use this code or build upon this work, please cite the following paper:
 
 ```bash
-python scripts/train.py
-
-Citation
-
-If you use this code or build upon this work, please cite the following paper:
 
 @inproceedings{houalef2025dwcl,
   title     = {Optimal Control of Electric Vehicles in Dynamic Wireless Charging Lanes Using Deep Q-Networks},
@@ -168,8 +164,7 @@ If you use this code or build upon this work, please cite the following paper:
 
 Preprint available at:
 https://hal.science/hal-05094364v1
+'''
 
 
-
-The agent observes the following state vector:
 
