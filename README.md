@@ -34,7 +34,7 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
   <img src="figures/demo.gif" width="800" alt="DWCL-RL Demonstration">
 </p>
 
-<p align="center"><em>Figure: Real-time agent decisions during DWCL operation</em></p>
+<p align="center"><em>Figure: Real-time control decisions during DWCL operation</em></p>
 
 > **🚗 To run a play window:** `python scripts/play_dwcl.py`
 
@@ -63,14 +63,14 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 ## 🤖 Reinforcement Learning Formulation
 
 ### 🧠 State Space
-| State Variable | Description | Range/Normalization |
-|----------------|-------------|---------------------|
-| `SoC` | Current battery state of charge | [0, 1] |
-| `SoC_required` | Minimum SoC to reach destination | [0, 1] |
-| `ETA` | Estimated time of arrival (seconds) | Normalized |
-| `remaining_distance` | Euclidean distance to destination (meters) | Normalized |
-| `lane_type` | Current lane type (0=normal, 1=DWCL) | {0, 1} |
-| `target_speed` | Current cruising speed (km/h) | [0, 120] |
+| State Variable | Description | 
+|----------------|-------------|
+| `SoC` | Current battery state of charge |
+| `SoC_required` | Minimum SoC to reach destination |
+| `ETA` | Estimated time of arrival (seconds) |
+| `remaining_distance` | Euclidean distance to destination (meters) |
+| `lane_type` | Current lane type (0=normal, 1=DWCL) |
+| `target_speed` | Current cruising speed (km/h) |
 
 ### 🎮 Action Space
 | Action ID | Action | Description |
@@ -82,10 +82,6 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 | 4 | ⏸️ Maintain (in DWCL) | Keep current speed |
 | 5 | 🚗 Stay Outside | Continue with Traffic Manager |
 
-### 🏆 Reward Function
-\[
-R = w_1 \cdot \Delta SoC + w_2 \cdot \Delta Time + w_3 \cdot Safety_{penalty} + w_4 \cdot LaneChange_{penalty}
-\]
 
 ---
 
