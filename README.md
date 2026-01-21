@@ -54,7 +54,7 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 ### Control Framework
 
 <p align="center">
-  <img src="figures/system_architecture.png" width="800" alt="System Architecture">
+  <img src="figures/system_architecture.png" width="400" alt="System Architecture">
 </p>
 <p align="center"><em>Figure 2: Integrated DQN-CARLA-DWCL control architecture</em></p>
 
