@@ -8,7 +8,7 @@ This repository contains the **official research code** for the paper:
 > *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim*  
 > **IEEE 102nd Vehicular Technology Conference (VTC2025-Fall), 2025**
 
-> **📌 Important:** The research code used for the paper is the Jupyter notebook (`DWCL_RL_Agent.ipynb`). Other files are refactored versions.
+> **📌 Important:** The research code used for the paper is the Jupyter notebook. Other files are refactored versions.
 
 This work addresses **energy-aware optimal control of electric vehicles (EVs)** operating on **Dynamic Wireless Charging Lanes (DWCL)** using **Deep Reinforcement Learning (DQN)** in the **CARLA high-fidelity simulator**.
 
