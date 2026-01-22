@@ -473,9 +473,9 @@ class DWCLPygameVisualizer:
             # Simple differentiation for acceleration
             prev_speed_ms = self.speed_history[-2] / 3.6 if len(self.speed_history) >= 2 else 0
             current_speed_ms = speed_ms
-            #delta_time = 0.1  # Assuming 20 Hz update
+            #delta_time = 0.05  # Assuming 20 Hz update
             if delta_time is None:
-                delta_time = 0.1 # Default value used to plot acceleration when not provided
+                delta_time = 0.05 # Default value used to plot acceleration when not provided
 
             #print("current_time:",current_time," last_update_time:",self.battery_manager.last_update_time)
             if delta_time > 0:
