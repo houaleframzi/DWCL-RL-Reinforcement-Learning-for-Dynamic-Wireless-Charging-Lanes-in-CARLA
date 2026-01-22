@@ -37,6 +37,8 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 <p align="center"><em>Figure: Real-time control decisions during DWCL operation</em></p>
 
 > **🚗 To run a play window:** `python scripts/play_dwcl.py`
+> **To train:** `python scripts/train.py`
+>  **Edit CARLA instation path in:** `python scripts/play_dwcl.py`
 
 ---
 
