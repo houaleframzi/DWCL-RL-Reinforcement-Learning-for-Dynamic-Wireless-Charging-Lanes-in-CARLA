@@ -39,6 +39,7 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 ---
 
 > **📌 Important Notes**
+> 
 > **CARLA Release:**  `0.9.15`
 >
 > **Python version:** `3.7.16`
