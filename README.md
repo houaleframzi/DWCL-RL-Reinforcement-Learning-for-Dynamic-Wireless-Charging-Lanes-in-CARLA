@@ -12,7 +12,7 @@ This repository contains the **official research code** for the paper:
 
 This work addresses **energy-aware optimal control of electric vehicles (EVs)** operating on **Dynamic Wireless Charging Lanes (DWCL)** using **Deep Reinforcement Learning (DQN)** in the **CARLA high-fidelity simulator**.
 
-> **Energy Model for the EV:** Based on our previous work:  
+ **Energy Model for the EV:** Based on our previous work:  
 > *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim. "Utilizing Data-Driven Techniques to Improve Predictive Modeling of Connected Electric Vehicle Energy Consumption." 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall).*  
 > [🔗 DOI: 10.1109/VTC2024-Fall63153.2024.10757738](https://hal.science/hal-04949806v1)
 
