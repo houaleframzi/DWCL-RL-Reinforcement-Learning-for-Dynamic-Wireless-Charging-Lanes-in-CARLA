@@ -44,7 +44,7 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 >
 > **Python version:** `3.7.16`
 > 
-> **Edit CARLA instation path in:** `src/carla_simulator/behavior_agent.py and src/carla_simulator/carla_env.py`
+> **Edit CARLA instalation path in:** `src/carla_simulator/behavior_agent.py and src/carla_simulator/carla_env.py`
 > 
 > **To run a play window:** `scripts/play_dwcl.py`.
 > 
