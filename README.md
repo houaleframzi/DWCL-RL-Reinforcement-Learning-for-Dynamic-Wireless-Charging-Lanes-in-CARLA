@@ -35,7 +35,8 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 </p>
 
 <p align="center"><em>Figure: Real-time control decisions during DWCL operation</em></p>
-
+---
+**📌 Important Notes**
 > **CARLA Release:**  `0.9.15`
 >
 > **Python version:** `3.7.16`
