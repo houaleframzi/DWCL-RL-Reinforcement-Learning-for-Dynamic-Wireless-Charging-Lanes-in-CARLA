@@ -18,49 +18,59 @@ class VehicleManager:
         
     def spawn_vehicle(self, location: Optional[Tuple[float, float, float]] = None):
         """
-        Spawn vehicle at specified location or random spawn point
+        Spawn vehicle at a specified location or at a default DWCL-compatible location.
+        Default location: (22.6, 251.0, 0.0)
         """
-        # Get blueprint
+
+        # -----------------------------
+        # Vehicle blueprint
+        # -----------------------------
         blueprint_lib = self.world.get_blueprint_library()
-        vehicle_bps = blueprint_lib.filter('nissan')
-        
+        vehicle_bps = blueprint_lib.filter("vehicle.nissan.*")
+
         if not vehicle_bps:
-            raise ValueError("No vehicle blueprint found")
-            
-        self.vehicle_blueprint = vehicle_bps[0]  # Use the first available blueprint the nissam micra or #random.choice(vehicle_bps)
-        
-        # Set spawn location
-        if location:
-            spawn_location = carla.Location(*location)
+            raise RuntimeError("No Nissan vehicle blueprint found")
+
+        self.vehicle_blueprint = vehicle_bps[0]  # Nissan Micra (deterministic)
+
+        # -----------------------------
+        # Spawn location (default or user-defined)
+        # -----------------------------
+        if location is None:
+            spawn_location = carla.Location(x=22.6, y=251.0, z=0.0)
         else:
-            spawn_points = self.world.get_map().get_spawn_points()
-            if not spawn_points:
-                raise ValueError("No spawn points available")
-            spawn_location = random.choice(spawn_points).location
+            spawn_location = carla.Location(*location)
 
-
-        current_wp = self.world.get_map().get_waypoint(
+        # Project to closest drivable waypoint
+        carla_map = self.world.get_map()
+        current_wp = carla_map.get_waypoint(
             spawn_location,
             project_to_road=True,
             lane_type=carla.LaneType.Driving
         )
-            
-        # Create transform
-        #spawn_transform = carla.Transform(
-        #    location=spawn_location,
-        #    rotation=carla.Rotation()
-        #)
-        
+
+        if current_wp is None:
+            raise RuntimeError("Failed to find a drivable waypoint for spawn location")
+
+        spawn_transform = current_wp.transform
+
+        # -----------------------------
         # Spawn vehicle
+        # -----------------------------
         self.vehicle = self.world.try_spawn_actor(
             self.vehicle_blueprint,
-            current_wp.transform
+            spawn_transform
         )
-        
+
         if self.vehicle is None:
-            raise RuntimeError("Failed to spawn vehicle")
-            
-        print(f"🚗 Vehicle spawned at {spawn_location}")
+            raise RuntimeError("Failed to spawn vehicle actor")
+
+        print(f"🚗 Vehicle spawned at ({spawn_transform.location.x:.2f}, "
+            f"{spawn_transform.location.y:.2f}, "
+            f"{spawn_transform.location.z:.2f})")
+
+        
+
         return self.vehicle
     
     def reset_vehicle(self, transform: carla.Transform):
