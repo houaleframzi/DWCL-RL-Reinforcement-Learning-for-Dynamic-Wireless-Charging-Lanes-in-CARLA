@@ -4,9 +4,9 @@
 
 This repository contains the **official research code** for the paper:
 
-> **🎯 Optimal Control of Electric Vehicles in Dynamic Wireless Charging Lanes Using Deep Q-Networks**  
-> *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim*  
-> **IEEE 102nd Vehicular Technology Conference (VTC2025-Fall), 2025**
+
+> *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim. "Optimal Control of Electric Vehicles in Dynamic Wireless Charging Lanes Using Deep Q-Networks." 2025 IEEE 102th Vehicular Technology Conference (VTC2025-Fall).*  
+> [🔗 DOI: 10.1109/VTC2025-Fall65116.2025.11310467](https://hal.science/hal-05094364v1)
 
 > **📌 Important:** The research code used for the paper is the Jupyter notebook. Other files are refactored versions.
 
@@ -14,7 +14,7 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 
 > **📚 Energy Model:** Based on our previous work:  
 > *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim. "Utilizing Data-Driven Techniques to Improve Predictive Modeling of Connected Electric Vehicle Energy Consumption." 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall).*  
-> [🔗 DOI: 10.1109/VTC2024-Fall63153.2024.10757738](https://doi.org/10.1109/VTC2024-Fall63153.2024.10757738)
+> [🔗 DOI: 10.1109/VTC2024-Fall63153.2024.10757738](https://hal.science/hal-04949806v1)
 
 **Objective:** Learn *when* an EV should:
 - ⚡ Enter or exit a DWCL
