@@ -1,4 +1,4 @@
-# 🔋 DWCL-RL: Reinforcement Learning for Dynamic Wireless Charging Lanes in CARLA
+# DWCL-RL: Reinforcement Learning for Dynamic Wireless Charging Lanes in CARLA
 
 ## 📖 Overview
 
@@ -6,7 +6,7 @@ This repository contains the **official research code** for the paper:
 
 
 > *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim. "Optimal Control of Electric Vehicles in Dynamic Wireless Charging Lanes Using Deep Q-Networks." 2025 IEEE 102th Vehicular Technology Conference (VTC2025-Fall).*  
-> [🔗 DOI: 10.1109/VTC2025-Fall65116.2025.11310467](https://hal.science/hal-05094364v1)
+> [ DOI: 10.1109/VTC2025-Fall65116.2025.11310467](https://hal.science/hal-05094364v1)
 
 > **📌 Important:** The research code used for the paper is the Jupyter notebook. Other files are refactored versions.
 
@@ -14,19 +14,19 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 
  **Energy Model for the EV:** Based on our previous work:  
 > *Ahmed-Ramzi Houalef, Florian Delavernhe, Sidi-Mohamed Senouci, El-Hassane Aglzim. "Utilizing Data-Driven Techniques to Improve Predictive Modeling of Connected Electric Vehicle Energy Consumption." 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall).*  
-> [🔗 DOI: 10.1109/VTC2024-Fall63153.2024.10757738](https://hal.science/hal-04949806v1)
+> [ DOI: 10.1109/VTC2024-Fall63153.2024.10757738](https://hal.science/hal-04949806v1)
 
 **Objective:** Learn *when* an EV should:
-- ⚡ Enter or exit a DWCL
-- 🎯 Adapt speed while charging
-- ⏱️ Balance energy constraints & travel time
-- 🛣️ Maintain lane-switching stability
+-  Enter or exit a DWCL
+-  Adapt speed while charging
+-  Balance energy constraints & travel time
+-  Maintain lane-switching stability
 
 *Without relying on handcrafted rules.*
 
 ---
 
-## 🎬 Demonstration
+## Demonstration
 
 **Full environment demonstration in CARLA** including DWCL entry/exit manoeuvres, charging behavior, energy-aware decisions, and regenerative braking:
 
@@ -53,7 +53,7 @@ This work addresses **energy-aware optimal control of electric vehicles (EVs)** 
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Dynamic Wireless Charging Lane (DWCL) Concept
 
@@ -73,9 +73,9 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 
 ---
 
-## 🤖 Reinforcement Learning Formulation
+## Reinforcement Learning Formulation
 
-### 🧠 State Space
+### State Space
 | State Variable | Description | 
 |----------------|-------------|
 | `SoC` | Current battery state of charge |
@@ -85,20 +85,20 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 | `lane_type` | Current lane type (0=normal, 1=DWCL) |
 | `target_speed` | Current cruising speed (km/h) |
 
-### 🎮 Action Space
+### Action Space
 | Action ID | Action | Description |
 |-----------|--------|-------------|
-| 0 | 🟢 Enter DWCL | Switch to charging lane |
-| 1 | 🔴 Exit DWCL | Return to normal lane |
-| 2 | ⬆️ Accelerate (in DWCL) | Increase speed while charging |
-| 3 | ⬇️ Decelerate (in DWCL) | Reduce speed while charging |
-| 4 | ⏸️ Maintain (in DWCL) | Keep current speed |
-| 5 | 🚗 Stay Outside | Continue with Traffic Manager |
+| 0 | Enter DWCL | Switch to charging lane |
+| 1 | Exit DWCL | Return to normal lane |
+| 2 | Accelerate (in DWCL) | Increase speed while charging |
+| 3 | Decelerate (in DWCL) | Reduce speed while charging |
+| 4 | Maintain (in DWCL) | Keep current speed |
+| 5 | Stay Outside | Continue with Traffic Manager |
 
 
 ---
 
-## 🚗 CARLA Simulation Environment
+## CARLA Simulation Environment
 
 <p align="center">
   <img src="figures/carla_scene.png" width="800" alt="CARLA Simulation">
@@ -106,15 +106,15 @@ DWCL technology enables EVs to recharge **while driving**, eliminating static ch
 <p align="center"><em>Figure 3: CARLA simulation with integrated DWCL infrastructure</em></p>
 
 **Environment Features:**
-- 🎯 Realistic vehicle dynamics (CARLA physics engine)
-- ⚡ DWCL coil placement & electromagnetic simulation
-- 🚦 Traffic Manager integration for realistic traffic
-- 🔄 Regenerative braking modeling
-- 📊 Real-time energy consumption tracking
+- Realistic vehicle dynamics (CARLA physics engine)
+- DWCL coil placement & electromagnetic simulation
+- Traffic Manager integration for realistic traffic
+- Regenerative braking modeling
+- Real-time energy consumption tracking
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use this code or build upon this work, please cite:
 
